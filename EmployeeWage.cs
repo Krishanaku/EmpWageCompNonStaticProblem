@@ -12,14 +12,19 @@ namespace EmpWageCompNonStaticProblem
         public const int EMP_RATE_PER_HOUR = 20;
         public const int IS_PART_TIME = 2;
         public const int NUM_OF_WORKING_DAYS = 20;
+        public const int MAX_HRS_IN_MONTHS = 100;
+
 
         public void CalEmployeeWage()
         {
             int empHrs = 0;
             int empWage = 0;
-            int totalEmpWage = 0;
-            for (int day = 0; day < NUM_OF_WORKING_DAYS; day++)
+            int totalEmpHrs = 0;
+            int totalWorkingdays = 0;
+
+            while (totalEmpHrs < MAX_HRS_IN_MONTHS && totalWorkingdays < NUM_OF_WORKING_DAYS)
             {
+                totalWorkingdays++;
 
 
 
@@ -45,10 +50,12 @@ namespace EmpWageCompNonStaticProblem
 
                 empWage = empHrs * EMP_RATE_PER_HOUR;
 
-                totalEmpWage += empWage;
-                Console.WriteLine("Emp Wage : " + empWage);
+                totalEmpHrs += empHrs;
+                Console.WriteLine("Day # : " + totalWorkingdays + "Emp Hrs " + empHrs); ;
             }
+            int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Total Emp Wage : " + totalEmpWage);
+
 
         }
     }
