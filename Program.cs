@@ -2,6 +2,8 @@
 
 namespace EmpWageCompNonStaticProblem
 {
+    //Calculate Daily
+//Employee Wage - Assume Wage per Hour is 20 - Assume Full Day Hour is 8
     public class Program
     {
         public static void Main(string[] args)
