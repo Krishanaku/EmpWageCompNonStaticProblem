@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpWageCompNonStaticProblem
 {
+    //
     public class EmployeeWage
     {
         public void CalEmployeeWage()
